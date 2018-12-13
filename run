@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(docker ps --filter="name=GrandeOmega" -aq)" ]; then
+  docker start -a GrandeOmega
+else 
+  docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --name=GrandeOmega grandeomega
+fi
+

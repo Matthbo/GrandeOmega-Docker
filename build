@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$(docker ps --filter="name=GrandeOmega" -aq)" ]; then
+  docker rm GrandeOmega
+fi
+
+docker build -t grandeomega .
