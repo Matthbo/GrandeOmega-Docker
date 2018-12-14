@@ -19,6 +19,7 @@ RUN \
 
 RUN apt-get update && apt-get install -y libgtkextra-dev libgconf2-dev libnss3 libasound2 libxtst-dev libxss1 libcanberra-gtk-module
 
+ARG CACHE_DATE
 COPY ./GrandeOmega/ /var/GrandeOmega/
 
 RUN python --version

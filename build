@@ -6,4 +6,4 @@ if [ "$(docker ps --filter="name=GrandeOmega" -aq)" ]; then
 fi
 
 echo "Building Docker container from ./GrandeOmega..."
-docker build -q -t grandeomega .
+docker build -q -t grandeomega . --build-arg CACHE_DATE="$(date)"
