@@ -1,6 +1,3 @@
-1st time commands (execute this if you haven't ever done this):
-- xhost +local:docker
-
 Setup: 
 - Download the mac version from natschool/cumlaude
 - Extract everything from the zip except for node_modules(!) in the GrandeOmega directory

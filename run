@@ -1,5 +1,7 @@
 #!/bin/bash
 
+xhost +local:docker > /dev/null
+
 if [ "$(docker ps --filter="name=GrandeOmega" -aq)" ]; then
   docker start -a GrandeOmega
 else 

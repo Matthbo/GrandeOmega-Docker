@@ -1,7 +1,9 @@
 #!/bin/bash
 
 if [ "$(docker ps --filter="name=GrandeOmega" -aq)" ]; then
+  echo "Removing outdated container from list"
   docker rm GrandeOmega
 fi
 
-docker build -t grandeomega .
+echo "Building Docker container from ./GrandeOmega..."
+docker build -q -t grandeomega .
